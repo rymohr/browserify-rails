@@ -34,7 +34,7 @@ module BrowserifyRails
 
     # Is this file already browserified?
     def browserified?
-      data.to_s.include?("_dereq_")
+      data.to_s.include?("define.amd") || data.to_s.include?("_dereq_")
     end
 
     # Is this a commonjs module?
